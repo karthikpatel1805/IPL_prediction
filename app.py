@@ -18,8 +18,9 @@ st.title("IPL Win Predictor")
 # Importing data an model from pickel
 teams = pkl.load(open('team.pkl','rb'))
 cities = pkl.load(open('city.pkl','rb'))
-model = pkl.load(open('model.pkl','rb'))
-
+#model = pkl.load(open('model.pkl','rb'))
+import joblib
+model = joblib.load("model.pkl")
 # First Row and columns 
 
 col1, col2, col3 = st.columns(3)
